@@ -5,14 +5,17 @@ winning_combinations = {
     'P': 'R',  # Paper beats Rock
     'S': 'P'   # Scissors beats Paper
 }
+
 choices = ['R', 'P', 'S']
 player = None
 
 while player != '0':
     
+    #input player move
     player = input("Your Move.. \n(R -> Rock, P -> Paper, S -> Scissors)\nExit -> 0\n").upper()
     print(f"Player Move: {player}")
 
+    #pc random choice from R P S
     pc = random.choice(choices)
     print(f"PC Move: {pc}")
 
