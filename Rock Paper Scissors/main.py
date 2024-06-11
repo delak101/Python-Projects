@@ -5,11 +5,15 @@ winning_combinations = {
     'P': 'R',  # Paper beats Rock
     'S': 'P'   # Scissors beats Paper
 }
+Score_pl = 0
+Score_pc = 0
 
 choices = ['R', 'P', 'S']
 player = None
 
 while player != '0':
+    
+    print(f"Score: {Score_pl} :  {Score_pc}")
     
     #input player move
     player = input("Your Move.. \n(R -> Rock, P -> Paper, S -> Scissors)\nExit -> 0\n").upper()
@@ -27,6 +31,8 @@ while player != '0':
         print("TIE!!")
     elif pc == winning_combinations.get(player):
         print("PLAYER WINS!!")
+        Score_pl += 1
     else:
         print("PC WINS!!")
+        Score_pc += 1
         
