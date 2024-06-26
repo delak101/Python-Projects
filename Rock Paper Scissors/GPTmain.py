@@ -1,3 +1,5 @@
+#gpt updated
+
 import random
 
 # Define winning combinations
