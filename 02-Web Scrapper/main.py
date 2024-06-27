@@ -10,4 +10,5 @@ books = soup.find_all("article")
 for book in books:
     title = book.h3.a["title"]
     rating = book.p["class"][1]
-    print("-book title: ", title,  "\n Rate:", rating)
+    price = book.find("p", class_="price_color").text
+    print("-book title: ", title, "\n Rate:", rating, "\n Price:", price)
