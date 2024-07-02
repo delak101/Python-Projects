@@ -1,6 +1,6 @@
 todo_list = []
 
-def add_task():
+def add_task():  # sourcery skip: use-named-expression
     task = input("Enter a Task: ").strip()
     if task:
         todo_list.append(task)
