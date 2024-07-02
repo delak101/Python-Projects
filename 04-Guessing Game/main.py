@@ -1,9 +1,8 @@
 import random
 
 def playCheck():
-    print("please enter yes or no")
     while True:
-        game = input("want to play? (yes/no)").lower()
+        game = input("want to play? (yes/no): ").lower()
         if game in ["yes", "no"]:
             return game
         print("please enter yes or no")
@@ -12,13 +11,16 @@ score = 0
 
 name = input("Plese enter your name: ")
 
-game = input(f"hi {name}, want to play guessing game? (yes/no)").lower()
+# Initial prompt
+game = input(f"Hi {name}, want to play a guessing game? (yes/no): ").lower()
+while game not in ["yes", "no"]:
+    game = input("Please enter 'yes' or 'no' : ")
 
 if game == "no":
     print("Come again!")
 else:
     while game == "yes":
-        
+
         print(f"[your score is: {score}]")
         print("I'm thinking of a number between 1 and 10.")
         number_to_guess = random.randint(1, 10)
@@ -46,7 +48,7 @@ else:
 
 
         game = playCheck()
-        
+
     print(f"Your final score is: {score}")
     print("Thanks for playing!")
 
