@@ -1,6 +1,6 @@
 todo_list = []
 
-while(True):
+while True:
     action = input("Enter Operation (add, view, remove, clear, exit): ")
     if action == "add":
         task = input("Enter a Task: ")
@@ -10,7 +10,7 @@ while(True):
     elif action == "remove":
         task = input("Enter a Task To Remove: ")
         if not todo_list:
-            print("list is empty")
+            print("List is empty")
         elif task in todo_list:
             todo_list.remove(task)
             print("Task Removed Successfully")
